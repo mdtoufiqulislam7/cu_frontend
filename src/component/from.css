@@ -1,0 +1,619 @@
+/* Form Container */
+.form-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(26, 54, 63, 0.95) 0%, rgba(15, 23, 42, 0.9) 100%);
+}
+
+/* Banner Section */
+.form-banner {
+  position: relative;
+  height: 300px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1a365f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://pfp.acsfutureschool.com/1760036975898_7fcqij5c_camp1.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(26, 54, 63, 0.9) 100%);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-left {
+  flex: 1;
+}
+
+.event-info {
+  color: white;
+}
+
+.event-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #10b981;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.form-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.form-instruction {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1rem;
+  color: #3b82f6;
+  margin: 0;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-color: #FFD700;
+  text-decoration-thickness: 2px;
+}
+
+.banner-right {
+  flex: 0 0 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 215, 0, 0.3);
+}
+
+.camp-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Form Section */
+.form-section {
+  padding: 3rem 0;
+  background: rgba(26, 54, 63, 0.1);
+}
+
+.form-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.registration-form {
+  background: rgba(26, 54, 63, 0.85);
+  border-radius: 20px;
+  padding: 3rem;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFD700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input-group input,
+.input-group select {
+  padding: 1rem;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 8px;
+  background: rgba(26, 54, 63, 0.6);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #FFD700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.input-group select option {
+  background: #1a365f;
+  color: white;
+}
+
+/* Payment Section */
+.payment-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(26, 54, 63, 0.6);
+  border-radius: 15px;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.payment-section .section-title {
+  margin-bottom: 2rem;
+}
+
+/* Payment Details */
+.payment-details {
+  margin-bottom: 2rem;
+}
+
+.payment-info-card {
+  background: rgba(26, 54, 63, 0.8);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 215, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.payment-method-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #FFD700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #FFD700;
+}
+
+.method-icon {
+  font-size: 2.5rem;
+}
+
+.method-info h5 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFD700;
+  margin: 0 0 0.25rem 0;
+}
+
+.account-type {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  color: white;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.account-number {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(26, 54, 63, 0.6);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  margin-bottom: 1rem;
+}
+
+.number-label {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.number-value {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFD700;
+  letter-spacing: 1px;
+  flex: 1;
+}
+
+.copy-btn {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+.copy-btn:hover {
+  background: linear-gradient(135deg, #FFA500, #FFD700);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.payment-note {
+  padding: 1rem;
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #FFD700;
+}
+
+.payment-note p {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.payment-note strong {
+  color: #FFD700;
+  font-weight: 700;
+}
+
+/* File Upload */
+.file-upload {
+  position: relative;
+}
+
+.file-upload input[type="file"] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-upload-label {
+  display: block;
+  padding: 1rem;
+  border: 2px dashed rgba(255, 215, 0, 0.5);
+  border-radius: 8px;
+  background: rgba(26, 54, 63, 0.6);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+}
+
+.file-upload-label:hover {
+  border-color: #FFD700;
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.file-preview {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.file-preview img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Submit Section */
+.submit-section {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #000;
+  border: none;
+  padding: 1.2rem 3rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  min-width: 250px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #FFA500, #FFD700);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Success Popup */
+.success-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.popup-content {
+  position: relative;
+  background: rgba(26, 54, 63, 0.95);
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  max-width: 500px;
+  width: 90%;
+  animation: popupSlideIn 0.3s ease-out;
+}
+
+@keyframes popupSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.success-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #FFD700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.popup-close-btn {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.popup-close-btn:hover {
+  background: linear-gradient(135deg, #FFA500, #FFD700);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .banner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .banner-right {
+    flex: none;
+  }
+  
+  .form-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-wrapper {
+    padding: 0 1rem;
+  }
+  
+  .registration-form {
+    padding: 2rem;
+  }
+  
+  .form-title {
+    font-size: 2rem;
+  }
+  
+  .event-title {
+    font-size: 1rem;
+  }
+  
+  .form-instruction {
+    font-size: 1rem;
+  }
+  
+  .logo-container {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .popup-content {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .success-title {
+    font-size: 1.5rem;
+  }
+  
+  .success-message {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-banner {
+    height: 250px;
+  }
+  
+  .banner-content {
+    padding: 0 1rem;
+  }
+  
+  .form-title {
+    font-size: 1.8rem;
+  }
+  
+  .registration-form {
+    padding: 1.5rem;
+  }
+  
+  .payment-section {
+    padding: 1.5rem;
+  }
+  
+  .submit-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    min-width: 200px;
+  }
+  
+  .popup-content {
+    padding: 1.5rem;
+  }
+  
+  .success-icon {
+    font-size: 3rem;
+  }
+  
+  .success-title {
+    font-size: 1.3rem;
+  }
+}
