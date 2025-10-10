@@ -18,6 +18,26 @@ function homePage() {
       <div className="banner-container">
         {/* Background Image with Overlay */}
         <div className="banner-background">
+          <img 
+            src="https://pfp.acsfutureschool.com/1760115479538_vmfrl0a5_bg.jpg" 
+            alt="Adventure Camp Background" 
+            className="background-image"
+            onLoad={() => console.log('Banner image loaded successfully!')}
+            onError={(e) => {
+              console.log('Image failed to load:', e.target.src);
+              console.log('Error details:', e);
+              e.target.style.display = 'none';
+            }}
+            style={{ 
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              zIndex: -2
+            }}
+          />
           <div className="banner-overlay"></div>
         </div>
         

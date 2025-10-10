@@ -17,11 +17,20 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://pfp.acsfutureschool.com/1760115479538_vmfrl0a5_bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(1px);
+  background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%);
+  z-index: -3;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 1;
+  display: block;
 }
 
 /* Light Overlay for Adventure Theme */
@@ -31,7 +40,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(173, 216, 230, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(173, 216, 230, 0.05) 100%);
+  z-index: -1;
 }
 
 /* Content Container */
@@ -174,6 +184,7 @@
     grid-template-rows: auto auto auto auto;
     text-align: center;
     gap: 1.5rem;
+    padding: 1.5rem;
   }
   
   .top-left-text {
@@ -232,49 +243,88 @@
   
   .title-cumilla {
     font-size: 2.5rem;
+    letter-spacing: 2px;
   }
   
   .title-15k {
     font-size: 2rem;
+    letter-spacing: 2px;
   }
   
   .title-run {
     font-size: 2.2rem;
+    letter-spacing: 2px;
   }
   
   .tagline {
     font-size: 1.2rem;
+    letter-spacing: 1px;
   }
   
   .register-button {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .title-cumilla {
-    font-size: 2rem;
+    letter-spacing: 1px;
   }
   
-  .title-15k {
-    font-size: 1.8rem;
-  }
-  
-  .title-run {
-    font-size: 1.9rem;
-  }
-  
-  .tagline {
-    font-size: 1rem;
+  .date-text {
+    font-size: 0.9rem;
   }
   
   .virtual-run-text {
     font-size: 1rem;
   }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    min-height: 400px;
+  }
+  
+  .banner-content {
+    padding: 0.5rem;
+    gap: 0.8rem;
+  }
+  
+  .title-cumilla {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  
+  .title-15k {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .title-run {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .virtual-run-text {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
   
   .date-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .register-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .title-bar {
+    width: 60px;
+    height: 4px;
   }
 }
 

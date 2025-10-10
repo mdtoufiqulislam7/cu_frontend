@@ -540,15 +540,17 @@
   }
   
   .registration-form {
-    padding: 2rem;
+    padding: 1.5rem;
   }
   
   .form-title {
     font-size: 2rem;
+    letter-spacing: 1px;
   }
   
   .event-title {
     font-size: 1rem;
+    letter-spacing: 1px;
   }
   
   .form-instruction {
@@ -562,6 +564,27 @@
   
   .section-title {
     font-size: 1.3rem;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .payment-info-card {
+    padding: 1.5rem;
+  }
+  
+  .payment-method {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .account-number {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
   }
   
   .popup-content {
