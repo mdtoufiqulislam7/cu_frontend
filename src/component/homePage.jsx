@@ -16,56 +16,35 @@ function homePage() {
     <div>
       {/* Banner Section */}
       <div className="banner-container">
-        {/* Background Image with Overlay */}
-        <div className="banner-background">
-          <img 
-            src="https://pfp.acsfutureschool.com/1760115479538_vmfrl0a5_bg.jpg" 
-            alt="Adventure Camp Background" 
-            className="background-image"
-            onLoad={() => console.log('Banner image loaded successfully!')}
-            onError={(e) => {
-              console.log('Image failed to load:', e.target.src);
-              console.log('Error details:', e);
-              e.target.style.display = 'none';
-            }}
-            style={{ 
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              zIndex: -2
-            }}
-          />
-          <div className="banner-overlay"></div>
-        </div>
+        {/* Background Image */}
+        <img 
+          src="https://pfp.acsfutureschool.com/1760598496310_sofhois8_bannnnner.png" 
+          alt="Burnerz Adventure Camp Background" 
+          className="banner-bg-image"
+        />
         
         {/* Content */}
         <div className="banner-content">
-          {/* Top Left Text */}
-          <div className="top-left-text">
-            <div className="date-text">NOVEMBER 14-15, 2025</div>
-            <div className="virtual-run-text">ADVENTURE CAMP</div>
+          {/* Main Title - Top */}
+          <div className="main-title-container">
+            <h1 className="main-title">
+              Burnerz Adventure Camp 2025
+            </h1>
           </div>
           
-          {/* Main Title */}
-          <div className="main-title-container">
-            <div className="title-bar"></div>
-            <h1 className="main-title">
-              <span className="title-cumilla">Burnerz </span>
-              <span className="title-15k">Adventure </span>
-              <span className="title-run">Camp 2025</span>
-            </h1>
+          {/* Date and Button Section - Bottom */}
+          <div className="date-button-section">
+            <div className="date-info">
+              <div className="date-text">NOVEMBER 21-22, 2025</div>
+              <div className="virtual-run-text">ADVENTURE CAMP</div>
+            </div>
+            <button onClick={gotofrom} className="register-button">
+              REGISTER NOW →
+            </button>
           </div>
           
           {/* Tagline */}
           <div className="tagline">Road Burnerz Club , Cumilla</div>
-          
-          {/* Register Button */}
-          <button onClick={gotofrom} className="register-button">
-            REGISTER NOW →
-          </button>
         </div>
       </div>
 
@@ -102,14 +81,14 @@ function homePage() {
             {/* Fee Section */}
             <div className="fee-section">
               <div className="fee-header">
-                <div className="popular-tag">POPULAR</div>
+                {/* <div className="popular-tag">POPULAR</div> */}
                 <h2 className="fee-title">ADVENTURE CAMP FEE</h2>
               </div>
               
               <div className="fee-content">
                 <div className="price-display">
                   <span className="currency">৳</span>
-                  <span className="price">1250</span>
+                  <span className="price">1260</span>
                 </div>
                 <p className="price-note">Taka Only (Without Transportation)</p>
                 
@@ -193,7 +172,7 @@ function homePage() {
               <div className="event-info">
                 <div className="info-item">
                   <span className="info-label">Date:</span>
-                  <span className="info-value">November 14-15, 2025</span>
+                  <span className="info-value">November 21-22, 2025</span>
                 </div>
                 <div className="info-item">
                   <span className="info-label">Location:</span>
@@ -222,10 +201,10 @@ function homePage() {
             <div className="footer-content">
               <div className="club-info">
                 <h3>ROAD BURNERZ CLUB</h3>
-                <p>Established 2020</p>
+                <p>Established 2015</p>
               </div>
               <div className="social-info">
-                <p>Facebook: Road Burnarz Cumilla</p>
+                <p>Facebook: <a href="https://www.facebook.com/groups/2471981482994655/" target="_blank" rel="noopener noreferrer">Road Burnarz Cumilla</a></p>
               </div>
               <div className="season-info">
                 <h3>BURNERZ ADVENTURE CAMP</h3>

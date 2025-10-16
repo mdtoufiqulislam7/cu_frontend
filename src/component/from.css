@@ -1,14 +1,13 @@
 /* Form Container */
 .form-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, rgba(26, 54, 63, 0.95) 0%, rgba(15, 23, 42, 0.9) 100%);
+  background: #ffffff;
 }
 
 /* Banner Section */
 .form-banner {
   position: relative;
   height: 300px;
-  background: linear-gradient(135deg, #1e3a8a 0%, #1a365f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,19 +20,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://pfp.acsfutureschool.com/1760036975898_7fcqij5c_camp1.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.1;
 }
 
-.banner-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+.banner-bg-image {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(26, 54, 63, 0.9) 100%);
+  object-fit: cover;
+  object-position: center;
 }
 
 .banner-content {
@@ -48,7 +41,7 @@
 }
 
 .banner-left {
-  flex: 1;
+  flex: 2;
 }
 
 .event-info {
@@ -59,10 +52,11 @@
   font-family: 'Arial', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #10b981;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .form-title {
@@ -73,14 +67,15 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .form-instruction {
   font-family: 'Arial', sans-serif;
   font-size: 1.1rem;
-  color: #3b82f6;
+  color: #ffffff;
   margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .underline {
@@ -90,19 +85,19 @@
 }
 
 .banner-right {
-  flex: 0 0 200px;
+  flex: 0 0 120px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .logo-container {
-  width: 150px;
-  height: 150px;
-  border-radius: 15px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  border: 3px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .camp-logo {
@@ -114,7 +109,7 @@
 /* Form Section */
 .form-section {
   padding: 3rem 0;
-  background: rgba(26, 54, 63, 0.1);
+  background: #ffffff;
 }
 
 .form-wrapper {
@@ -639,4 +634,71 @@
   .success-title {
     font-size: 1.3rem;
   }
+}
+
+/* Terms and Conditions */
+.terms-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.terms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.term-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.term-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #ffd700;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.term-item label {
+  color: #e2e8f0;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+  flex: 1;
+}
+
+.term-item label:hover {
+  color: #ffd700;
+}
+
+/* Textarea styling */
+.input-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 80px;
+  transition: all 0.3s ease;
+}
+
+.input-group textarea:focus {
+  outline: none;
+  border-color: #ffd700;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+.input-group textarea::placeholder {
+  color: rgba(226, 232, 240, 0.6);
 }

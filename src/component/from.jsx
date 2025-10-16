@@ -6,26 +6,41 @@ function From() {
   const navigate = useNavigate();
   
   const [formData, setFormData] = useState({
-    phone: '',
+    contact_number: '',
     email: '',
     name: '',
-    b_name: '',
-    division: '',
-    thana: '',
+    nickname: '',
+    p_address: '',
     gender: '',
-    blood_group: '',
+    t_size: '',
+    bick_club_name: '',
+    bick_brand: '',
+    b_group: '',
     transaction_id: ''
   });
   
   const [paymentPicture, setPaymentPicture] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [agreements, setAgreements] = useState({
+    clubRules: false,
+    safetyGear: false,
+    photoPermission: false
+  });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
+    }));
+  };
+
+  const handleAgreementChange = (e) => {
+    const { name, checked } = e.target;
+    setAgreements(prev => ({
+      ...prev,
+      [name]: checked
     }));
   };
 
@@ -43,6 +58,13 @@ function From() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Check if all agreements are accepted
+    if (!agreements.clubRules || !agreements.safetyGear || !agreements.photoPermission) {
+      alert('Please accept all terms and conditions to proceed.');
+      return;
+    }
+    
     setIsLoading(true);
 
     try {
@@ -69,17 +91,24 @@ function From() {
         setShowSuccess(true);
         // Reset form
         setFormData({
-          phone: '',
+          contact_number: '',
           email: '',
           name: '',
-          b_name: '',
-          division: '',
-          thana: '',
+          nickname: '',
+          p_address: '',
           gender: '',
-          blood_group: '',
+          t_size: '',
+          bick_club_name: '',
+          bick_brand: '',
+          b_group: '',
           transaction_id: ''
         });
         setPaymentPicture(null);
+        setAgreements({
+          clubRules: false,
+          safetyGear: false,
+          photoPermission: false
+        });
       } else {
         alert('Registration failed. Please try again.');
       }
@@ -96,7 +125,11 @@ function From() {
       {/* Banner Section */}
       <div className="form-banner">
         <div className="banner-background">
-          <div className="banner-overlay"></div>
+          <img 
+            src="https://pfp.acsfutureschool.com/1760597749141_3cr07bn6_landing_page.png" 
+            alt="Burnerz Adventure Camp Background" 
+            className="banner-bg-image"
+          />
         </div>
         
         <div className="banner-content">
@@ -111,13 +144,13 @@ function From() {
           </div>
           
           <div className="banner-right">
-            <div className="logo-container">
+            {/* <div className="logo-container">
               <img 
                 src="https://pfp.acsfutureschool.com/1760036975898_7fcqij5c_camp1.jpg" 
                 alt="Burnerz Adventure Camp Logo" 
                 className="camp-logo"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -132,7 +165,7 @@ function From() {
                 <h3 className="section-title">Personal Information</h3>
                 
                 <div className="input-group">
-                  <label htmlFor="name">Full Name *</label>
+                  <label htmlFor="name">Name *</label>
                   <input
                     type="text"
                     id="name"
@@ -145,79 +178,28 @@ function From() {
                 </div>
 
                 <div className="input-group">
-                  <label htmlFor="b_name">Bangla Name</label>
+                  <label htmlFor="nickname">Nickname / Rider Name *</label>
                   <input
                     type="text"
-                    id="b_name"
-                    name="b_name"
-                    value={formData.b_name}
+                    id="nickname"
+                    name="nickname"
+                    value={formData.nickname}
                     onChange={handleInputChange}
-                    placeholder="Enter your name in Bangla"
+                    required
+                    placeholder="Enter your nickname or rider name"
                   />
                 </div>
 
                 <div className="input-group">
-                  <label htmlFor="phone">Phone Number *</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
+                  <label htmlFor="p_address">Present Address *</label>
+                  <textarea
+                    id="p_address"
+                    name="p_address"
+                    value={formData.p_address}
                     onChange={handleInputChange}
                     required
-                    placeholder="01XXXXXXXXX"
-                  />
-                </div>
-
-                <div className="input-group">
-                  <label htmlFor="email">Email Address *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-              </div>
-
-              {/* Location & Personal Details */}
-              <div className="form-group">
-                <h3 className="section-title">Location & Details</h3>
-                
-                <div className="input-group">
-                  <label htmlFor="division">Division *</label>
-                  <select
-                    id="division"
-                    name="division"
-                    value={formData.division}
-                    onChange={handleInputChange}
-                    required
-                  >
-                    <option value="">Select Division</option>
-                    <option value="Dhaka">Dhaka</option>
-                    <option value="Chittagong">Chittagong</option>
-                    <option value="Rajshahi">Rajshahi</option>
-                    <option value="Khulna">Khulna</option>
-                    <option value="Barisal">Barisal</option>
-                    <option value="Sylhet">Sylhet</option>
-                    <option value="Rangpur">Rangpur</option>
-                    <option value="Mymensingh">Mymensingh</option>
-                  </select>
-                </div>
-
-                <div className="input-group">
-                  <label htmlFor="thana">Thana/Upazila *</label>
-                  <input
-                    type="text"
-                    id="thana"
-                    name="thana"
-                    value={formData.thana}
-                    onChange={handleInputChange}
-                    required
-                    placeholder="Enter your thana/upazila"
+                    placeholder="Enter your present address"
+                    rows="3"
                   />
                 </div>
 
@@ -238,11 +220,60 @@ function From() {
                 </div>
 
                 <div className="input-group">
-                  <label htmlFor="blood_group">Blood Group</label>
+                  <label htmlFor="t_size">T-shirt Size *</label>
                   <select
-                    id="blood_group"
-                    name="blood_group"
-                    value={formData.blood_group}
+                    id="t_size"
+                    name="t_size"
+                    value={formData.t_size}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="">Select T-shirt Size</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Biking Information */}
+              <div className="form-group">
+                <h3 className="section-title">Biking Information</h3>
+                
+                <div className="input-group">
+                  <label htmlFor="bick_club_name">Biking Club Name *</label>
+                  <input
+                    type="text"
+                    id="bick_club_name"
+                    name="bick_club_name"
+                    value={formData.bick_club_name}
+                    onChange={handleInputChange}
+                    required
+                    placeholder="Enter your biking club name"
+                  />
+                </div>
+
+                <div className="input-group">
+                  <label htmlFor="bick_brand">Bike Brand & Model *</label>
+                  <input
+                    type="text"
+                    id="bick_brand"
+                    name="bick_brand"
+                    value={formData.bick_brand}
+                    onChange={handleInputChange}
+                    required
+                    placeholder="e.g., Honda CBR 150R"
+                  />
+                </div>
+
+                <div className="input-group">
+                  <label htmlFor="b_group">Blood Group</label>
+                  <select
+                    id="b_group"
+                    name="b_group"
+                    value={formData.b_group}
                     onChange={handleInputChange}
                   >
                     <option value="">Select Blood Group</option>
@@ -255,6 +286,32 @@ function From() {
                     <option value="O+">O+</option>
                     <option value="O-">O-</option>
                   </select>
+                </div>
+
+                <div className="input-group">
+                  <label htmlFor="contact_number">Contact Number *</label>
+                  <input
+                    type="tel"
+                    id="contact_number"
+                    name="contact_number"
+                    value={formData.contact_number}
+                    onChange={handleInputChange}
+                    required
+                    placeholder="01XXXXXXXXX"
+                  />
+                </div>
+
+                <div className="input-group">
+                  <label htmlFor="email">Email Address *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    placeholder="your.email@example.com"
+                  />
                 </div>
               </div>
             </div>
@@ -276,10 +333,10 @@ function From() {
                   </div>
                   <div className="account-number">
                     <span className="number-label">Account Number:</span>
-                    <span className="number-value">01866733279</span>
+                    <span className="number-value">01629253127</span>
                     <button 
                       className="copy-btn"
-                      onClick={() => navigator.clipboard.writeText('01866733279')}
+                      onClick={() => navigator.clipboard.writeText('01629253127')}
                     >
                       Copy
                     </button>
@@ -322,6 +379,55 @@ function From() {
                     <img src={URL.createObjectURL(paymentPicture)} alt="Payment preview" />
                   </div>
                 )}
+              </div>
+            </div>
+
+            {/* Terms and Conditions */}
+            <div className="terms-section">
+              <h3 className="section-title">Terms and Conditions</h3>
+              
+              <div className="terms-list">
+                <div className="term-item">
+                  <input
+                    type="checkbox"
+                    id="clubRules"
+                    name="clubRules"
+                    checked={agreements.clubRules}
+                    onChange={handleAgreementChange}
+                    required
+                  />
+                  <label htmlFor="clubRules">
+                    ✅ I agree to follow club rules and regulations.
+                  </label>
+                </div>
+                
+                <div className="term-item">
+                  <input
+                    type="checkbox"
+                    id="safetyGear"
+                    name="safetyGear"
+                    checked={agreements.safetyGear}
+                    onChange={handleAgreementChange}
+                    required
+                  />
+                  <label htmlFor="safetyGear">
+                    ✅ I will ensure safety gear during rides.
+                  </label>
+                </div>
+                
+                <div className="term-item">
+                  <input
+                    type="checkbox"
+                    id="photoPermission"
+                    name="photoPermission"
+                    checked={agreements.photoPermission}
+                    onChange={handleAgreementChange}
+                    required
+                  />
+                  <label htmlFor="photoPermission">
+                    ✅ I give permission to use my photos/videos for club events.
+                  </label>
+                </div>
               </div>
             </div>
 
