@@ -342,7 +342,7 @@ function From() {
                     </button>
                   </div>
                   <div className="payment-note">
-                    <p>Please send <strong>৳1250</strong> to this bKash number and use the transaction ID in the form below.</p>
+                    <p>Please send <strong>৳1260</strong> to this bKash number and use the transaction ID in the form below.</p>
                   </div>
                 </div>
               </div>
