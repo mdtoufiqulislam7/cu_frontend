@@ -59,7 +59,7 @@ function homePage() {
         <div className="about-content">
           {/* Header */}
           <div className="about-header">
-            <h1 className="about-title">ABOUT BURNERZ ADVENTURE CAMP</h1>
+            <h1 className="about-title">BURNERZ ADVENTURE CAMP</h1>
             <div className="about-subtitle">Road Burnerz Club, Cumilla</div>
           </div>
           
@@ -93,7 +93,7 @@ function homePage() {
                 <p className="price-note">Taka Only (Without Transportation)</p>
                 
                 <div className="fee-details">
-                  <h3 className="category-title">General Category (14 yrs and above)</h3>
+                  <h3 className="category-title">General Category (18 YEARS and above)</h3>
                   <p className="category-description">
                     General category consists of all classes of adventurers. 
                     <strong>Professionally trained adventurers, outdoor enthusiasts from different organizations/clubs, students, 
@@ -204,7 +204,7 @@ function homePage() {
                 <p>Established 2015</p>
               </div>
               <div className="social-info">
-                <p>Facebook: <a href="https://www.facebook.com/groups/2471981482994655/" target="_blank" rel="noopener noreferrer">Road Burnarz Cumilla</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/groups/2471981482994655/" target="_blank" rel="noopener noreferrer">Road Burnerz Cumilla</a></p>
               </div>
               <div className="season-info">
                 <h3>BURNERZ ADVENTURE CAMP</h3>
