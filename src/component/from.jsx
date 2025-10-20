@@ -81,8 +81,8 @@ function From() {
       }
 
       // You can replace this URL with your actual backend URL
-      // const backendUrl = 'https://road-server.onrender.com'; // Replace with your actual backend URL
-      const backendUrl = 'http://localhost:5000';
+      const backendUrl = 'https://road-server.onrender.com'; // Replace with your actual backend URL
+      // const backendUrl = 'http://localhost:5000';
       const response = await fetch(`${backendUrl}/api/info`, {
         method: 'POST',
         body: submitData

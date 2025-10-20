@@ -8,8 +8,8 @@ function Approved() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  // const backendUrl = 'https://road-server.onrender.com';
-  const backendUrl = 'http://localhost:5000';
+  const backendUrl = 'https://road-server.onrender.com';
+//   const backendUrl = 'http://localhost:5000';
 
   // Fetch approved registrations
   useEffect(() => {

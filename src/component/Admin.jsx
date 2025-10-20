@@ -9,8 +9,8 @@ function Admin() {
   const [approvingId, setApprovingId] = useState(null);
   const navigate = useNavigate();
 
-  // const backendUrl = 'https://road-server.onrender.com';
-  const backendUrl = 'http://localhost:5000';
+  const backendUrl = 'https://road-server.onrender.com';
+//   const backendUrl = 'http://localhost:5000';
 
   // Fetch registration data
   useEffect(() => {
