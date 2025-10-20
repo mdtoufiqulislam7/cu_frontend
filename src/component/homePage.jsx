@@ -68,7 +68,7 @@ function homePage() {
             {/* About Card */}
             <div className="about-card">
               <div className="card-image">
-                <img src="https://pfp.acsfutureschool.com/1760038353629_o3nmhjgx_camp3.jpg" alt="Burnerz Adventure Camp" />
+                <img src="https://pfp.acsfutureschool.com/1760982176847_eu8tyd77_su.png" alt="Burnerz Adventure Camp" />
               </div>
               <div className="card-content">
                 <h2 className="card-title">About Burnerz Adventure Camp</h2>

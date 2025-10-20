@@ -109,7 +109,7 @@
 /* Form Section */
 .form-section {
   padding: 3rem 0;
-  background: #ffffff;
+  background: linear-gradient(135deg, rgba(26, 54, 63, 0.95) 0%, rgba(15, 23, 42, 0.9) 100%);
 }
 
 .form-wrapper {

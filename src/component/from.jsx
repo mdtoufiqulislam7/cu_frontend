@@ -81,7 +81,8 @@ function From() {
       }
 
       // You can replace this URL with your actual backend URL
-      const backendUrl = 'https://road-server.onrender.com'; // Replace with your actual backend URL
+      // const backendUrl = 'https://road-server.onrender.com'; // Replace with your actual backend URL
+      const backendUrl = 'http://localhost:5000';
       const response = await fetch(`${backendUrl}/api/info`, {
         method: 'POST',
         body: submitData
@@ -397,7 +398,7 @@ function From() {
                     required
                   />
                   <label htmlFor="clubRules">
-                    ✅ I agree to follow club rules and regulations.
+                    I agree to follow club rules and regulations.
                   </label>
                 </div>
                 
@@ -411,7 +412,7 @@ function From() {
                     required
                   />
                   <label htmlFor="safetyGear">
-                    ✅ I will ensure safety gear during rides.
+                    I will ensure safety gear during rides.
                   </label>
                 </div>
                 
@@ -425,7 +426,7 @@ function From() {
                     required
                   />
                   <label htmlFor="photoPermission">
-                    ✅ I give permission to use my photos/videos for club events.
+                    I give permission to use my photos/videos for club events.
                   </label>
                 </div>
               </div>
