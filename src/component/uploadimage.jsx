@@ -10,7 +10,7 @@ function UploadImage() {
   const [error, setError] = useState(null)
   const [copiedIndex, setCopiedIndex] = useState(null)
 
-  const API_BASE_URL = 'https://ngw9h44230.execute-api.ap-south-1.amazonaws.com/production'
+  const API_BASE_URL = 'https://affapi.acsfutureschool.cloud/subscription/generate-signed-url'
 
   const handleFileSelect = (e) => {
     const files = Array.from(e.target.files)
